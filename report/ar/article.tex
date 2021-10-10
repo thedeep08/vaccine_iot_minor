@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+\usepackage{lmodern}
+
+\input{head.tex}
+\usepackage[backend=biber, style=ieee]{biblatex}
+\usepackage{easylist}
+\usepackage{hanging}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{tipa}
+\usepackage[left=2.5cm, top=2cm, bottom=2cm, right=2.5cm]{geometry}
+\nocite{*}
+\addbibresource{article.bib}
+
+\title{Forecasting Rate of Spread of Covid19 using Linear Regression and LSTM}
+
+\author{ Kartik Puri\\ \texttt{kartikpuri99@gmail.com}
+	 \and
+	Ashwin Goyal\\ \texttt{ashwingoyal180@gmail.com} \\
+	 \and
+	Dr. Rachna Jain\\ \texttt{rachnajain.bvcoe@bvp.edu.in}
+	 \and
+	Dr. Preeti Nagrath\\ \texttt{preeti.nagrath@bharatividyapeeth.edu} \\
+  }
+
+\date{\small{Department of Electronics \& Communication Engineering} \\ \textbf{Bharati
+Vidyapeeths College Of Enginnering}  \\ \today}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+	COVID-19 virus, knows as novel coronavirus, spread across
+	the world. The World Health Organisation (WHO), marked
+	11\textsuperscript{th} March, 2020 as the day when COVID19 was
+	declared as pandemic. It, was first
+	originated in Wuhan, China.
+	In recent days, Covid19 impacted various
+	social and economic fields in the world.
+	It is necesssary to
+	quantify its spread and make predictions on how it is going to
+	affect the world in coming months.
+	In this paper, our aim is to use linear
+	regression and LSTM algorithms to forecast of Covid19 spread.
+	The objective of this study is to determine if spread can be
+	forecasted to better accuracy using linear regression and LSTM
+	algortihms.
+	 \\
+
+
+	KeyWords: Machine Learning, Linear Regression, LSTM, Mean
+	Absolute Error, COVID-19
+	\\
+	\\
+\end{abstract}
+
+\pagenumbering{arabic}
+\input{body.tex}
+
+%\pagebreak
+%\onecolumn
+\printbibliography
+
+\end{document}

@@ -1,0 +1,73 @@
+References
+[1]
+
+C.-W. Shih and C.-H. Wang, “Integrating wireless sensor networks
+with statistical quality control to develop a cold chain system in food
+industries,” Computer Standards & Interfaces, vol. 45, 2016. doi: 10.
+1016/j.csi.2015.12.004.
+
+[2]
+
+S. Monteleone, M. Sampaio, and R. F. Maia, “A novel deployment of
+smart cold chain system using 2g-rfid-sys temperature monitoring in
+medicine cold chain based on internet of things,” 2017 IEEE International Conference on Service Operations and Logistics, and Informatics (SOLI), 2017. doi: 10.1109/soli.2017.8120995.
+
+[3]
+
+J. Ruan and Y. Shi, “Monitoring and assessing fruit freshness in iotbased e-commerce delivery using scenario analysis and interval number
+approaches,” Information Sciences, vol. 373, pp. 557–570, 2016. doi:
+10.1016/j.ins.2016.07.014.
+
+[4]
+
+A. A. Chandra and S. R. Lee, “A method of wsn and sensor cloud system to monitor cold chain logistics as part of the iot technology,” International Journal of Multimedia and Ubiquitous Engineering, vol. 9,
+no. 10, pp. 145–152, 2014. doi: 10.14257/ijmue.2014.9.10.15.
+
+[5]
+
+D. Zhang and T. Han, “Analysis of risk control factors of medical cold
+chain logistics based on ism model,” in 2020 Chinese Control And
+Decision Conference (CCDC), IEEE, 2020, pp. 4222–4227.
+
+[6]
+
+Y. Xv, X. Zhang, X. Qiu, and X. Liang, “Analysis of cold chain development based on ism model under the situation of (covid-19),” in
+2020 16th Dahe Fortune China Forum and Chinese High-educational
+Management Annual Academic Conference (DFHMC), IEEE, 2020,
+pp. 254–257.
+
+[7]
+
+A. H. A. Halim, M. H. A. Halim, S. Usman, et al., “Implementation
+of iot and blockchain for temperature monitoring in covid19 vaccine
+cold chain logistics,” Open International Journal of Informatics, vol. 9,
+no. 1, pp. 78–87, 2021.
+
+[8]
+
+J. Ruan and Y. Shi, “Monitoring and assessing fruit freshness in iotbased e-commerce delivery using scenario analysis and interval number
+approaches,” Information Sciences, vol. 373, pp. 557–570, 2016.
+
+[9]
+
+L. Ding, J. Wang, and L. Li, “Privacy-preserving temperature query
+protocol in cold-chain logistics,” in 2015 7th International Conference
+on Intelligent Human-Machine Systems and Cybernetics, IEEE, vol. 1,
+2015, pp. 113–116.
+1
+
+[10]
+
+S. Shingh, V. Kamalvanshi, S. Ghimire, and S. Basyal, “Dairy supply chain system based on blockchain technology,” Asian Journal of
+Economics, Business and Accounting, pp. 13–19, 2020.
+
+[11]
+
+T. Bengiovanni, R. C. Rosito, V. Lacasa, E. Simone, I. Sergi, V. Iacovone, M. Viggiano, and L. Patrono, “Risk management and healthcare:
+Iot technologies and smart monitoring system for a good cold chain
+management,” in 2020 5th International Conference on Smart and
+Sustainable Technologies (SpliTech), IEEE, 2020, pp. 1–6.
+
+2
+
+

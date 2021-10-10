@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{lmodern}
+\input{head.tex}
+\input{glossary.tex}
+
+\begin{document}
+
+\input{cover.tex}
+
+\pagenumbering{Roman}
+
+
+\input{content.tex}
+
+\pagenumbering{arabic}
+\input{body.tex}
+
+
+%\medskip
+\newpage
+\pagebreak
+\nocite{*}
+\bibliographystyle{ieeetr}
+\bibliography{bibliography}
+
+
+%% %Bibliogra*phy
+% %\addcontentsline{toc}{section}{Bibliography}
+% %\bibliographystyle{apalike}
+% \bibliography{bibliography}
+%% \nocite{*}
+% % %Bibliogra*phy
+%  \addcontentsline{toc}{section}{Bibliography}
+%  \bibliographystyle{apalike}
+%  \bibliography{bibliography}
+
+
+\end{document}

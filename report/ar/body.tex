@@ -1,0 +1,426 @@
+\section{Introduction}
+
+The spread of COVID19, from the sars-cov2 virus
+occurred in Wuhan, China, is on the rise and has shaken the world. The World
+Health Organization christened the illness as COVID-19 when the first case of this
+virus was reported.
+
+The Global spread of COVID19 affected every major nation and was defined as a
+pandemic by the WHO in March 2020.
+
+This paper tracks the spread of the novel coronavirus, also known as the
+COVID-19. COVID-19 is a contagious respiratory virus that first started in
+Wuhan December 2019. \cite{data_world}
+
+The two types of coronaviruses, named as, "severe acute respiratory syndrome
+coronavirus" and "Middle East respiratory syndrome"  have affected more than
+20,000 individuals in last ten years \cite{huang2020clinical}.
+
+The coronavirus can spread by various means.However some of the common means through which the infection can occur are:
+
+\begin{enumerate}
+	\item airborne or aerosol transmission
+	\item direct or indirect contact with another human
+	\item and lastly through droplet spray transmission
+\end{enumerate}
+
+However a person can protect himself from these transmission modes.Close contact can be avoided and a minimum distance of 1.8 metres should be maintained to avoid contact with a person as well as respiratory droplets.However for airborne transmission a minimum of 4 metre should be maintained to avoid contact.Symptoms of COVID 19 are coughing ,extreme fever,tiredness or weakness and pain in some joints of the body.
+
+%% Respiratory infections can be transmitted through droplets of different sizes:
+%when the droplet particles are $>5-10 \mu m$ in diameter they are referred to as respiratory droplets, and when then
+%are $<5 \mu m$ in diameter, they are referred to as droplet nuclei. According to current evidence, COVID-19 virus
+%is primarily transmitted between people through respiratory droplets and contact routes. In an analysis of
+%75,465 COVID-19 cases in China, airborne transmission was not reported. Droplet transmission occurs when
+%a person is in in close contact (within 1 m) with someone who has respiratory symptoms (e.g., coughing or
+%sneezing) and is therefore at risk of having his/her mucosae (mouth and nose) or conjunctiva (eyes) exposed
+%to potentially infective respiratory droplets. Symptoms as fever, cough, and shortness of breath after a period
+%ranging from 2 to 14 days are observed as the outcomes of the disease. Detailed investigations found that
+%SARS-CoV was transmitted from civet cats to humans in China in 2002 and MERS-CoV from dromedary
+%camels to humans in Saudi Arabia in 2012. Several known coronaviruses are circulating in animals that have
+%not yet infected humans.
+
+So for helping combat coronavirus, the use of artificial intelligence
+techniques such as machine learning and deep learning models were studied and
+implemented in this paper.These model
+will gives us a rough estimate as to how the disease will spread in the upcoming days how many more people
+will be effected.It will a rough estimate to the government of various countries about how the spread and will
+enable them to be prepared well in advance for the epidemic.
+
+Most of the data driven approaches used in previous studies
+\cite{knight2016bridging} have been linear models and often neglects the
+temporal components of the data.
+
+
+In this report data preprocessing techniques are  applied on the confirmed cases data and then the preprocessed
+data is applied to two models i.e. LSTM and Linear Regression .The actual and
+forecast values of  cases are compared on
+a predefined metrics. A comparison is made between the performance of
+LSTM and Linear regression model to see which model best for the data.
+
+The section \textbf{Literature Review} talks about similar work done by
+other researchers on this topic and talk about the model and approach used by
+them.
+
+The methodology used in the paper and the approach on how to handle this
+problem is also discussed.
+
+The section \textbf{Methods and models} talks about the dataset used and and its
+features. Since classification is done worldwide, so the data was processed to
+suite the needs of the models in use and a brief description of the processed
+dataset was also provided.
+
+Next, Evaluation metrics are discussed to understand and compare the result
+between the two models used. MAPE and Accuracy were used to compare the result
+and were used to draw conclusions.
+
+Also the models of Linear regression and LSTM network are explained
+demonstrating our approach.
+
+In the end \textbf{Experiment Result} are shown. Evaluation metrics are used
+to compare the result.
+
+%\pagebreak
+
+\section{Literature Review}
+
+In \cite{hu2020artificial},an machine learning based alternative to
+transmission dynamics for Covid-19 is used. This AI based approach is executed by implementing modified stacked
+auto-encoder model.
+
+In \cite{bandyopadhyay2020machine}, an deep learning based approach is
+proposed to compared the predicted forecasting value of LSTM and GRU model. The
+Model was prepared and tested on the data and a comparison was made using the
+predefined metrics.
+
+In \cite{ayyoubzadeh2020predicting}, LSTM and Linear regression model was used
+to predict the COVID-19 incidence through Analysis of Google Trends data in
+Iran. The Model were compared on the Basis of RMSE metrics.
+
+In \cite{chimmula2020time}, an LSTM networks based approach is proposed for
+forecasting time series data of COVID\-19.
+This paper uses Linear short Term memory network to overcome problems faced by linear model where
+algorithms assigns high probability and neglects temporal information leading to
+biased predictions.
+
+In \cite{fanelli2020analysis}, temporal dynamics of the corona virus outbreak
+in China, Italy, and France in the span of three months are analyzed.
+
+In \cite{bouktif2018optimal}, a variety of linear and non-linear machine
+learning algorithms approaches were studied and the best one as baseline, after
+that the best features were chosen, using wrapper and
+embedded feature selection methods and genetic algorithm (GA) was used to
+determine optimal time lags and number of layers for LSTM model predictive performance
+optimization.
+
+In \cite{yang2020modified}, temporal dynamics of the corona virus outbreak in China, Italy, and France in
+the span of three months are analysed.
+
+%In \cite{anastassopoulou2020data}, a computation and analysis based on Suspected-Infected-Recovered-Dead
+%(SIRD) model is provided. Based on the dataset, it estimates the parameters, i.e. the
+%basic reproduction number (R0) and the infection, recovery and mortality rates,
+
+In \cite{rainisch2020dynamic},a modeling tool was constructed to aid active public health officials to estimate
+healthcare demand from the pandemic.The model used was SEIR compartmental model
+to project the pandemic’s local spread.
+
+In \cite{singh2020connecting},a transmission network based visualization  of COVID-19 in India was created and
+analyzed. The transmission networks obtained were used to find the possible Super Spreader Individual  and Super Spreader Events
+(SSE).
+
+In \cite{elmousalami2020day}, comparison of day level forecasting models on COVID-19 affected
+cases using time series models and mathematical formulation. The study
+concluded exponential growth in countries that do not follow quarantine rules.
+
+In \cite{roosa2020real},phenomenological models that have been validated during previous outbreaks
+were used to generate and assess short-term forecasts of the cumulative number of
+confirmed reported cases in Hubei province.
+
+\subsection{Our Work}
+
+In our report, the confirmed cases of corona virus are studied from the start
+of the epidemic and the two approaches of Linear Regression and LSTM networks
+are used, and an report is presented stating which of the above stated model
+works best these type of data on the basis of Mean Absolute Error.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics{images/world_wide.png}
+	\caption{Number of cases around the world}
+	\label{fig:world}
+\end{figure}
+
+%\section{Theory}
+%
+%
+
+%\pagebreak
+
+\section{Methods and models}
+
+\subsection{Data}
+The dataset used was the Johns Hopkins University Center for Systems Science and Engineering
+(JHU CSSE) for COVID-19.
+
+It consist of 3 dataset each of Death, Confirmed, Recovered cases of 188
+countries datewise. The number of date columns are 138 starting from 22
+Jan,2020 to 8 June,2020.Out of this about 85\% are used as training data
+and the rest used as testing and validating data. So the model would be
+predicting next 15\% data value.
+
+The prediction would not be made on a specific country rather it will be
+worldwide.
+
+\begin{table}[!ht]
+	\caption{World Dataset of Corona virus spread with confirmed, death,
+	and recovery rates}
+	\centering
+	\resizebox{\columnwidth}{1.5cm}{%
+		\begin{tabular}{lrrrrrrrr}
+			\toprule
+			{} &     Confirmed &    Recoveries &         Deaths &
+			Confirmed Change &  Recovery Rate &  Growth Rate & \\
+			\midrule
+			count &  1.390000e+02 &  1.390000e+02 &     139.000000 &        138.000000 &     139.000000 &   138.000000 \\
+			mean  &  1.918547e+06 &  6.817390e+05 &  123264.726619 &      50666.268116 &       0.286331 &     0.076081 \\
+			std   &  2.170725e+06 &  8.911273e+05 &  138597.907312 &      42526.463980 &       0.143922 &     0.117824 \\
+			min   &  5.400000e+02 &  2.800000e+01 &      17.000000 &         89.000000 &       0.017598 &     0.005032 \\
+			25\%   &  7.862450e+04 &  2.747150e+04 &    2703.000000 &       2957.500000 &       0.207790 &     0.021193 \\
+			50\%   &  8.430870e+05 &  1.738930e+05 &   44056.000000 &      67738.000000 &       0.288055 &     0.032183 \\
+			75\%   &  3.546736e+06 &  1.142438e+06 &  249918.000000 &      84446.500000 &       0.395898 &     0.085793 \\
+			max   &  6.992485e+06 &  3.220219e+06 &  397840.000000 &     130518.000000 &       0.544809 &     0.951446 \\
+			\bottomrule
+		\end{tabular}}
+	  \label{table:world_df}
+\end{table}
+
+Table [\ref{table:world_df}] show the world data of Corona virus spread with
+confirmed, death and recovery rates.
+
+%\pagebreak
+\subsection{Evaluation Metrics}
+
+For the selection of better performing model, it is necessary to use some kind
+of performance/evaluation metrics to evaluate the algorithm’s performance.
+In this paper, MAPE and Accuracy are used to
+measure model's performance:
+
+\begin{enumerate}
+	\item \textbf{Mean Absolute Percentage Error}: It is defined by
+		the following formula:
+		\begin{equation}\label{eqn1}
+			%E = {mc^2}
+			MAPE = \frac{100\%}{n} \sum \left \vert \frac{y-y\prime}{y}
+			\right \vert
+		\end{equation}
+
+		Where \emph{y}' is true value and \emph{y'} is predicted value.
+
+	\item \textbf{Accuracy}: It is defined by the following formula:
+		\begin{equation}\label{eqn2}
+			Accuracy = (100 - MAPE)\%
+		\end{equation}
+
+\end{enumerate}
+
+
+\begin{figure*}[!ht]
+	  \centering
+	  \includegraphics[height=14cm]{images/method.jpg}
+	  \caption{Flowchart for proposed methodology}
+	  \label{fig:method_flow}
+\end{figure*}
+
+\subsection{Method}
+
+The prediction of confirmed cases due to COVID-19 are evaluated using
+Recurrent Neural Network method(LSTM) and Linear Regression.
+
+Linear regression is a statistical model, that works with values where the
+input variable (x) and output variable (y) have a linear relationship, for
+single input the model is known as simple linear regression.
+
+A recurrent neural network is a special kind of Artificial neural network which
+has memory of the previous inputs i.e it remembers the previous inputs. In these neural networks the output of previous neuron is fed as input to the next neuron.It is generally used in problems like when it is required to predict the following word in a sentence or in time-series data.However a main problem associated with RNN is gradient vanishing and exploding.In this the gradient starts vanishing as we go deeper into the layers due to which the model stops updating weights.This problems can be solved using special RNN like Long Short Term Memory(LSTM) RNN and Gated Recurrent Unit(GRU).These have a much better gradient flow and perform better than traditional RNN and are generally used. \cite{bandyopadhyay2020machine}.
+
+The dataset used for predicting the value is taken from John Hopkin University which
+contains cases form 21 Jan 2020 to 8 June,2020. The training and testing of both the models
+is done on this dataset.It contains 138 date columns out of which 120 are used for training
+and the rest 18days are used for testing data or for forecasting it.At first the data is preprocessed by converting the date columns into datetime object and also eliminate the
+missing values. The preprocessed data is then transformed in the required shape to be put
+into the model.The models are trained and the test data is predicted and prediction result
+are quantified using performance measures metrics such as MAPE and
+accuracy.The methodology performed for each of the step is shown in the figure
+\ref{fig:method_flow} as show.
+
+\subsubsection{Linear Regression}
+Linear regression based models are generally used for prediction tasks. The
+technique is used which tries to best fit the value to a linear line.This line can be used to
+relate both the predicting and predicted value.When there is more than one value then the
+
+In case of exponential relations, linear regression can not be directly used.
+But after transformation to a linear expression, even exponential relations can
+be predicted using linear regression. For example,
+\begin{equation}
+	y = \alpha e^{\beta x}
+\end{equation}
+
+Taking the log on both sides of the equation, we get:
+
+\begin{equation}
+	\ln y = \ln \alpha + \beta x
+\end{equation}
+
+This expression is of the form of a linear regression model:
+\begin{equation}
+	y\prime = \alpha \prime + \beta x
+\end{equation}
+
+
+%\pagebreak
+
+\subsubsection{LSTM Model}
+
+Long Short term memory (LSTM) is an recurrent neural network which is most effective for time
+series prediction.The model used in this case is sequential.As the data was time series and
+we needed to predict the best positive corona cases so this model was best for our study.The
+model was build using tensorflow keras framework and the models performance was
+evaluated on the mean absolute error percentage (MAPE).
+The proposed architecture of LSTM model is depicted in the figure
+\ref{fig:lstm_arch} as:
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[scale=0.5]{images/lstm_mod.jpg}
+	\caption{Architecture of LSTM model}
+	\label{fig:lstm_arch}
+\end{figure}
+
+\newpage
+
+\section{Experiment Result}
+
+In LSTM prediction, LSTM layers use sequence of 180 nodes. Single layered structure followed by
+2 Dense Layers with 60 nodes in the first layer and single node in the output layer is used as LSTM model for verifying prediction result. The best
+hyperparameters used is a batch size of 1. The result of the model
+is as shown \ref{table:lstm}
+
+\begin{table}[ht!]
+	\centering
+	\caption{Accuracy and MAPE of LSTM model}
+	\begin{tabular}{c c c}
+		Model & Accuracy & MAPE \\
+		LSTM model & 96.90\% & 3.092\%
+	\end{tabular}
+	\label{table:lstm}Middle East respiratory syndrome
+\end{table}
+
+%\pagebreak
+The prediction result is shown in figure below:
+\begin{figure}[ht!]
+	\centering
+	\includegraphics{images/lstm_graph.png}
+	\caption{Comparison of predicted and true value using LSTM model}
+	\label{fig:lstm_graph}
+\end{figure}
+%\pagebreak
+
+Linear regression model was used on the time series data and the date columns were taken
+as input and the 18 days data was predicted. The exponential fit of the model
+was fit and the result of the model is as shown
+\ref{table:linear}
+
+\begin{table}[ht!]
+	\centering
+	\caption{Accuracy and MAPE of regression model}
+	\begin{tabular}{c c c}
+		Model & Accuracy & MAPE \\
+		Linear model & 93.57\% & 6.421\%
+	\end{tabular}
+	\label{table:linear}
+\end{table}
+
+The prediction result of comparing the test data predicted data is show below:
+\begin{figure}[ht!]
+	\centering
+	\includegraphics{images/linear_graph.png}
+	\caption{Comparison of predicted and true value using Linear Regression model}
+	\label{fig:linear_graph}
+\end{figure}
+
+\pagebreak
+
+\subsection{Comparing with other studies}
+%
+In \cite{hu2020artificial}, they used an multi-step forecasting system on
+the population of china, and the estimated average errors are as show in
+\ref{table:three}
+
+\begin{table}[ht!]
+	\centering
+	\caption{Result \cite{hu2020artificial}: Method and Average Errors}
+	\begin{tabular}{c c }
+		Model & Error  \\
+		6-Step & 1.64\% \\
+		7-Step & 2.27\% \\
+		8-Step & 2.14\% \\
+		9-Step & 2.08\% \\
+		10-Step & 0.73\%
+	\end{tabular}
+	\label{table:three}
+\end{table}
+
+
+In \cite{chimmula2020time}, LSTM netwoks are used to on Canadian population,
+the reuslt are show is table \ref{table:four}
+
+\begin{table}[ht!]
+	\centering
+	\caption{Results \cite{chimmula2020time}: Canadian Datasets}
+	\begin{tabular}{c c c}
+		Model & RMSE & Accuracy \\
+		LSTM & 34.63 & 93.4\%
+
+	\end{tabular}
+	\label{table:four}
+\end{table}
+
+
+In \cite{bandyopadhyay2020machine}, an deep learning based approach is
+proposed to compared the predicted forcasting value of LSTM and GRU model is
+used the result are as show in table \ref{table:seven}:
+
+\begin{table}[ht!]
+	\centering
+	\caption{Results \cite{chimmula2020time}: Canadian Datasets}
+	\begin{tabular}{c c c}
+		Model & RMSE & Accuracy \\
+		LSTM & 53.35 & 76.6\% \\
+		GRU & 30.95 & 76.9\% \\
+		LSTM and GRU & 30.15 & 87\%
+
+	\end{tabular}
+	\label{table:seven}
+\end{table}
+
+\section{Conclusion and Future Scope}
+
+The comparison between Regression and LSTM model signifies that using LSTM
+yields better results for the forecasting the spread of confirmed cases.
+showcases a method that checks occurred cases of
+COVID-19. However it could be made automated to train on the updated data
+every week and see the predicted value. Also the model is trained only on confirmed cases
+same could be done for both recovered and death cases and predicted values could be found.
+The model shows only the worldwide cases however the dataset also provides country wise
+statistics so it can be used by different country to forecast the future outcome of the
+pandemic and take necessary preventive measures to be safe from this worldwide
+pandemic.
+A conclusion is drawn that shows forecasting models could be used by medical
+and government agencies to make better policies for controlling the spread of
+pandemic. The comparison between the 2 models allows them to choose the better
+suited model for the required task.
+The availability of high- quality and timely data in the early stages of the outbreak collaboration of
+the researchers to analyze the data could have positive effects on health care
+resource planning.
+
+
+%\newpage

@@ -1,0 +1,66 @@
+\documentclass[twocolumn,showpacs,amsmath,amssymb,aps,prl,nobalancelastpage]{article}
+%\textheight 750pt
+%\usepackage{amsthm}
+\usepackage{amsmath}
+%No!!! \usepackage{newlfont}
+\usepackage[demo]{graphicx}
+\usepackage{subfigure}
+\usepackage[section]{placeins}
+\usepackage{psfrag}
+\usepackage{caption2}
+\usepackage{float}
+\usepackage{flafter}
+\usepackage{color}
+\usepackage{bm}%
+\usepackage{lipsum}
+
+\def\fnum@figure{\figurename\thefigure}
+\renewcommand{\figurename}{Fig.}
+\newcommand{\D}{\textrm{d}}% should be \mathrm{d}
+\newcommand{\sech}{\textrm{sech}}% I suspect this should be \DeclareMathOperator\sech{sech}
+
+\begin{document}
+
+    While trying to learn the American manual alphabet I discovered a   computer method to read text as if it were being finger spelled. All one needs is a Windows word-processor (or something equivalent) and a sign-language font.
+
+I'm quite happy with the result and think it will interest any persons who are learning the American manual alphabet themselves. The method should also work for other manual alphabets (such as the two-handed alphabet used in the UK) should fonts ever be made for them.
+
+%\onecolumngrid
+
+\begin{figure*}
+    \centering
+    \begin{subfigure}
+        \centering
+        \includegraphics[width=2.2in,height=2in]{T20}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering
+        \includegraphics[width=2.2in,height=2in]{T40}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering
+        \includegraphics[width=2.2in,height=2in]{T60}
+        % \caption{}\label{subfg-2:flate}
+    \end{subfigure}
+
+    \medskip
+    \begin{subfigure}
+        \centering
+        \includegraphics[height=2in]{T20C}
+        %\caption{}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering
+        \includegraphics[height=2in]{T40C}
+        % \caption{}\label{subfig-2:flate}
+    \end{subfigure}
+    \begin{subfigure}
+        \centering
+        \includegraphics[height=2in]{T60C}
+        %\caption{}
+    \end{subfigure}
+    \caption{Variation}\label{width_3}
+\end{figure*}
+
+\end{document}
+

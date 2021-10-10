@@ -1,0 +1,67 @@
+\documentclass[a4paper]{jpconf}
+\usepackage{lmodern}
+
+\input{head.tex}
+\usepackage[backend=biber, style=ieee]{biblatex}
+\usepackage{easylist}
+\usepackage{hanging}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{subfig}
+\usepackage{tipa}
+\nocite{*}
+\addbibresource{article.bib}
+
+\begin{document}
+
+\title{Forecasting Rate of Spread of Covid19 using Linear Regression and LSTM}
+
+\author{Kartik Puri \textsuperscript{[1]}
+Ashwin Goyal\textsuperscript{[2]}
+Rachna Jain\textsuperscript{[3]}
+Preeti Nagrath \textsuperscript{[4]} }
+
+\address{1. kartikpuri99@gmail.com; Department of Electronics and Communication Engineering \\
+2. ashwingoayl180@gmail.com; Department of Electronics and Communication Engineering \\
+3.rachnajain.bvcoe@bvp.edu.in; Department of Computer Science and Engineering \\
+4.preeti.nagrath@bharatividyapeeth.edu; Department of Computer Science and Engineering}
+
+
+%\affil[1]{Department of Electronics and Communication Engineering}
+%\affil[2]{Department of Computer Science and Engineering}
+\date{\small{\textbf{Bharati
+Vidyapeeth's College Of Enginnering} }}
+
+
+
+\begin{abstract}
+COVID-19 virus, knows as novel coronavirus, has spread all over
+the world.  World Health Organisation (WHO), marked
+11\textsuperscript{th} March, 2020 as the day when COVID19 was
+declared as pandemic. It, was first
+originated in Wuhan, China.
+In recent days, Covid19 caused an immense impact on various
+social and economic fiels in the world.
+It is necesssary to
+quantify its spread and make predictions on how it is going to
+affect the world in coming months.
+In this paper, our aim is to use linear
+regression and LSTM algorithms to forecast of Covid19 spread.
+The objective of this study is to determine if spread can be
+forecasted to better accuracy using linear regression and LSTM
+algortihms.
+	 \\
+
+KeyWords: Machine Learning, Linear Regression, LSTM, Mean
+Absolute Error, COVID-19
+	\\
+\end{abstract}
+
+\pagenumbering{gobble}
+\input{body.tex}
+
+\pagebreak
+%\onecolumn
+\printbibliography
+
+\end{document}
